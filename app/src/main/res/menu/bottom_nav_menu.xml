@@ -1,24 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/home_24dp_1f1f1f_fill0_wght400_grad0_opsz24"
-        android:title="Trang Chủ" />
-
-    <item
-        android:id="@+id/nav_search"
-        android:icon="@drawable/bg_search"
-        android:title="Tìm Kiếm" />
-
-    <item
-        android:id="@+id/nav_library"
-        android:icon="@drawable/library_music_24dp_1f1f1f_fill0_wght400_grad0_opsz24"
-        android:title="Thư Viện" />
+        android:icon="@drawable/home"
+        android:title="Home"
+        app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/nav_playlist"
-        android:icon="@drawable/list_24dp_1f1f1f_fill0_wght400_grad0_opsz24"
-        android:title="Tạo List" />
+        android:icon="@drawable/list"
+        android:title="PlayPlist"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/nav_favourite"
+        android:icon="@drawable/fav"
+        android:title="Favourite"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/settings"
+        android:title="Setting"
+        app:showAsAction="ifRoom"/>
 
 </menu>

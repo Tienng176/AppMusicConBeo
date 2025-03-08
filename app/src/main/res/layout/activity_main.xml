@@ -8,24 +8,19 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- Nội dung của app -->
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
     <!-- Thanh tìm kiếm -->
     <EditText
         android:id="@+id/search_bar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/bg_search"
-        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawableStart="@drawable/bg_rounded"
+        android:drawableEnd="@android:drawable/ic_menu_search"
         android:drawablePadding="10dp"
-        android:hint="Search songs, artists..."
+        android:hint="Tìm kiếm bài hát, nghệ sĩ..."
         android:padding="10dp"
         android:textColor="@android:color/white"
-        android:textColorHint="@color/blue" />
+        android:textColorHint="@color/gray" />
 
     <!-- Tiêu đề -->
     <TextView
@@ -33,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="Browse"
+        android:text="Pard"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -49,6 +44,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <!-- Hip-Hop -->
             <LinearLayout
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
@@ -61,7 +57,7 @@
                     android:layout_height="100dp"
                     android:background="@drawable/bg_rounded"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/thai_breakdancers" />
+                    android:src="@drawable/hiphop" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -72,6 +68,7 @@
                     android:textSize="14sp" />
             </LinearLayout>
 
+            <!-- Pop -->
             <LinearLayout
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
@@ -84,7 +81,7 @@
                     android:layout_height="100dp"
                     android:background="@drawable/bg_rounded"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/channels4_profile" />
+                    android:src="@drawable/pop" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -103,7 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="Recommendation"
+        android:text="Đề xuất cho bạn"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -111,16 +108,16 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/song_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:padding="10dp" />
-    <!-- Thanh điều hướng (Navigation Bar) -->
+
+    <!-- Bottom Navigation Bar -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:menu="@menu/bottom_nav_menu" />
-
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled" />
 </LinearLayout>
